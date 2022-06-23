@@ -81,6 +81,7 @@ function addButtonFunction () {
     link : link.value})
 
     console.log(data)
+    cetak()
 
     // console.log(judulLagu.value)
     // console.log(genre.value)
