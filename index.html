@@ -45,9 +45,9 @@
                         </td> -->
                         <td>
                             <select name="genre" id="genre" class="form">
-                                <option value="R&B">Genre 1</option>
-                                <option value="Koplo">Genre 2</option>
-                                <option value="Rock">Genre 3</option>
+                                <option value="R&B">R&B</option>
+                                <option value="Koplo">Koplo</option>
+                                <option value="Rock">Rock</option>
                             </select>
                         </td>
                     </tr>
@@ -82,7 +82,11 @@
                     </tr> -->
                     <div class="table">
                         <input type="text" id="cari" placeholder="Masukan judul lagu / artis">
-                
+                        <select id="sort" onchange="sortingBy()">
+                            <option value="judul">Judul</option>
+                            <option value="artis">Artis</option>
+                            <option value="genre">Genre</option>
+                        </select> 
                         <table border="1" cellpadding="10" class="cetakTable" id="myTable">
                             <tr>
                                 <th>No</th>
