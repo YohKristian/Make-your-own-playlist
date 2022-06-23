@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="container" style="height: auto">
+    <div class="container">
         <div class="input-form">
             <form autocomplete="off">
                 <input type="hidden" id="indexlagu" />
@@ -19,8 +19,7 @@
                             <label for="judul_lagu">Judul Lagu</label>
                         </td> -->
                         <td>
-                            <input type="text" name="judul_lagu" id="judul_lagu" placeholder="Judul Lagu" autofocus
-                                class="form" style="margin-top: 20px;">
+                            <input type="text" name="judul_lagu" id="judul_lagu" placeholder="Judul Lagu" autofocus class="form">
                         </td>
                     </tr>
                     <tr>
@@ -44,7 +43,7 @@
                             <label for="genre">Genre</label>
                         </td> -->
                         <td>
-                            <select name="genre" id="genre" class="form" style="height: 45px; font-size: large;">
+                            <select name="genre" id="genre" class="form">
                                 <option value="R&B">R&B</option>
                                 <option value="Koplo">Koplo</option>
                                 <option value="Rock">Rock</option>
@@ -81,15 +80,13 @@
                         </td>
                     </tr> -->
                 <div class="table">
-                    <input type="text" id="cari" placeholder="Masukan judul lagu / artis"
-                        style="margin-top: 30px; margin-bottom: 20px; width: 620px;" class="form">
+                    <input type="text" id="cari" placeholder="Masukan judul lagu / artis" class="form">
                     <select id="sort" onchange="sortingBy()" class="sort">
                         <option value="judul">Judul</option>
                         <option value="artis">Artis</option>
                         <option value="genre">Genre</option>
                     </select>
-                    <table border="0" cellpadding="10" class="cetakTable" id="myTable"
-                        style="color: white; border-color: blue;font-family: sans-serif; background-color: rgba(0, 0, 0, 0.796);">
+                    <table border="0" cellpadding="10" class="cetakTable" id="myTable">
                         <tr style="text-align: left;">
                             <th>No</th>
                             <th style="width: 257px;">Judul Lagu</th>
@@ -106,7 +103,7 @@
                 <!-- </table> -->
             </form>
             <footer>
-                <p style="font-family: sans-serif">&copy zurichFox - 8 | 2022</p>
+                <p>&copy zurichFox - 8 | 2022</p>
             </footer>
         </div>
         

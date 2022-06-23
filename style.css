@@ -11,6 +11,7 @@ body {
 .container {
   display: flex;
   border-radius: 10px;
+  height: auto;
   box-shadow: 3px 3px 20px rgba(169, 116, 116, 0.827);
   background-color: rgba(200, 0, 255, 0.07);
   padding-top: 50px;
@@ -18,8 +19,6 @@ body {
   padding-left: 50px;
   padding-bottom: 50px;
   margin-top: 30px;
-  height: 100%;
-
 }
 
 .form {
@@ -32,6 +31,10 @@ body {
   border-color: rgb(0, 255, 47);
 }
 
+#judul_lagu {
+  margin-top: 20px;
+}
+
 #genre {
   width: 752px;
   padding: 5px 20px;
@@ -42,6 +45,8 @@ body {
   border-color: #00ffd0;
   color: rgb(255, 255, 255);
   cursor: pointer;
+  height: 45px;
+  font-size: large;
 }
 
 .button {
@@ -112,5 +117,18 @@ footer {
   color: white;
   font-size: small;
   justify-content: center;
+  font-family: sans-serif;
+}
 
+#myTable {
+  color: white;
+  border-color: blue;
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.796);
+}
+
+#cari {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 620px;
 }
