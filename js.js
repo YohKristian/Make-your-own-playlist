@@ -39,24 +39,22 @@ let data = [
 ]
 
 
-function sortingBy(song, sort) {
-    song.sort((a,b) => {
+function sortingBy() {
+    let sort = document.getElementById('sort').value
+    data.sort((a,b) => {
         let byA = a[sort].toUpperCase()
         let byB = b[sort].toUpperCase()
         if (byA > byB) return 1
         if (byB > byA) return -1
     })
-    return song
+    cetak()
 }
-// console.log(sortingBy(data, 'judul'));
 
 function action(song, act, i) {
     // if (act === 'edit') {
     // }
     if (act === 'delete') delete song[i] 
 }
-
-
 
 //DOM
 function addButtonFunction () {
@@ -97,41 +95,14 @@ function cetak() {
     document.getElementById("kontenmusik").innerHTML = ""
     for (let x = 0; x < data.length; x++) {
         //create TR
-        document.getElementById("kontenmusik").innerHTML += `<tr><td>${x + 1}</td><td>${data[x].judul}</td><td>${data[x].artis}</td><td>${data[x].genre}</td>
-        <td><button type="button" onclick="editBaris(${x})">Edit</button></td><td><button onclick="deleteBaris(${x})">Delete</button></td><td><button><a href="${data[x].link}" target="_blank">Play</a></button></td></tr>`
-        // let tr = document.createElement("tr")
-        // tr.setAttribute("class", x)
-        // table.appendChild(tr)
-        
-        // //Create New TD
-        // let newTD1 = document.createElement("td")
-        // newTD1.innerText = data[x].judul
-        // tr.appendChild(newTD1)
-        // let newTD2 = document.createElement("td")
-        // newTD2.innerText = data[x].artis
-        // tr.appendChild(newTD2)
-        // let newTD3 = document.createElement("td")
-        // newTD3.innerText = data[x].genre
-        // tr.appendChild(newTD3)
-        // let newTD4 = document.createElement("td")
-        // tr.appendChild(newTD4)
-        // let buttonEdit = document.createElement("button")
-        // buttonEdit.innerText = "Edit"
-        // newTD4.appendChild(buttonEdit)
-        // let newTD5 = document.createElement("td")
-        // tr.appendChild(newTD5)
-        // let buttonDelete = document.createElement("button")
-        // buttonDelete.innerText = "Delete"
-        // newTD5.appendChild(buttonDelete)
-        // let newTD6 = document.createElement("td")
-        // tr.appendChild(newTD6)
-        // let buttonPlay = document.createElement("button")
-        // newTD6.appendChild(buttonPlay)
-        // let linkA = document.createElement("a")
-        // linkA.setAttribute("href", data[x].link)
-        // linkA.setAttribute("target", "_blank")
-        // linkA.innerText = "Play"
-        // buttonPlay.appendChild(linkA)
+        let no = `<td>${x + 1}</td>`
+        let judul = `<td>${data[x].judul}</td>`
+        let artis = `<td>${data[x].artis}</td>`
+        let genre = `<td>${data[x].genre}</td>`
+        let btnEdit = `<td><button type="button" onclick="editBaris(${x})">Edit</button></td>`
+        let btnDelete = `<td><button onclick="deleteBaris(${x})">Delete</button></td>`
+        let btnPlay = `<td><button><a href="${data[x].link}" target="_blank">Play</a></button></td>`
+        document.getElementById("kontenmusik").innerHTML += `<tr>${no}${judul}${artis}${genre}${btnEdit}${btnDelete}${btnPlay}</tr>`
     }
 }
 cetak()
