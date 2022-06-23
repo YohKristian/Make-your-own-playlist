@@ -59,6 +59,8 @@ function addButtonFunction () {
     genre : genre.value,
     link : link.value})
 
+    console.log(data)
+
     // console.log(judulLagu.value)
     // console.log(genre.value)
     // console.log(artis.value)
@@ -68,5 +70,3 @@ function addButtonFunction () {
 let addButtonId = document.getElementById("addButton")
 
 addButtonId.addEventListener("click", addButtonFunction)
-
-console.log(data)
