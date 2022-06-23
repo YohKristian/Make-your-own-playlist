@@ -1,3 +1,4 @@
+// PROCESSING JS
 let data = [
     {
         judul : 'Save Your Tears',
@@ -35,7 +36,27 @@ let data = [
         genre : 'Rock',
         link : `https://www.youtube.com/watch?v=s1tAYmMjLdY`
     }
-  ]
+]
+
+
+function sortingBy(song, sort) {
+    song.sort((a,b) => {
+        let byA = a[sort].toUpperCase()
+        let byB = b[sort].toUpperCase()
+        if (byA > byB) return 1
+        if (byB > byA) return -1
+    })
+    return song
+}
+// console.log(sortingBy(data, 'judul'));
+
+function action(song, act, i) {
+    // if (act === 'edit') {
+    // }
+    if (act === 'delete') delete song[i] 
+}
+
+
 
 //DOM
 function addButtonFunction () {
