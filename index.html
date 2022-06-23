@@ -8,12 +8,12 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" style="height: auto">
         <div class="input-form">
             <form autocomplete="off">
-                <input type="hidden" id="indexlagu"/>
+                <input type="hidden" id="indexlagu" />
                 <table>
-                    <img src="img/logo.png" alt="logo">
+                    <img src="img/logo.png" alt="logo">                    
                     <tr>
                         <!-- <td>
                             <label for="judul_lagu">Judul Lagu</label>
@@ -44,7 +44,7 @@
                             <label for="genre">Genre</label>
                         </td> -->
                         <td>
-                            <select name="genre" id="genre" class="form">
+                            <select name="genre" id="genre" class="form" style="height: 45px; font-size: large;">
                                 <option value="R&B">R&B</option>
                                 <option value="Koplo">Koplo</option>
                                 <option value="Rock">Rock</option>
@@ -60,13 +60,13 @@
                 </table>
                 <!-- <input type="text" id="cari" class="form" placeholder="Masukan judul lagu / artis" style="margin-top: 30px">
                 <table border="2" cellpadding="10" class="container table" style="margin-top: 0; inline">
-                    <tr style="color: white; font-family: Mulish, sans-serif;">
+                    <tr style="color: white; font-family: sans-serif;">
                         <th>No</th>
                         <th>Judul Lagu</th>
                         <th>Genre</th>
                         <th colspan="3">Action</th>
                     </tr>
-                    <tr style="color: white; font-family: Mulish, sans-serif;">
+                    <tr style="color: white; font-family: sans-serif;">
                         <td>1</td>
                         <td>Lagu 1</td>
                         <td>Genre 1</td>
@@ -80,30 +80,41 @@
                             <button>Play</button>
                         </td>
                     </tr> -->
-                    <div class="table">
-                        <input type="text" id="cari" placeholder="Masukan judul lagu / artis">
-                        <select id="sort" onchange="sortingBy()">
-                            <option value="judul">Judul</option>
-                            <option value="artis">Artis</option>
-                            <option value="genre">Genre</option>
-                        </select> 
-                        <table border="1" cellpadding="10" class="cetakTable" id="myTable">
-                            <tr>
-                                <th>No</th>
-                                <th>Judul Lagu</th>
-                                <th>Artis</th>
-                                <th>Genre</th>
-                                <th colspan="3">Action</th>
-                            </tr>
-                            <tbody id="kontenmusik"></tbody>
-                            <!-- Cetak Here -->
-                        </table>
-                    </div>
+                <div class="table">
+                    <input type="text" id="cari" placeholder="Masukan judul lagu / artis"
+                        style="margin-top: 30px; margin-bottom: 20px; width: 620px;" class="form">
+                    <select id="sort" onchange="sortingBy()" class="sort">
+                        <option value="judul">Judul</option>
+                        <option value="artis">Artis</option>
+                        <option value="genre">Genre</option>
+                    </select>
+                    <table border="0" cellpadding="10" class="cetakTable" id="myTable"
+                        style="color: white; border-color: blue;font-family: sans-serif; background-color: rgba(0, 0, 0, 0.796);">
+                        <tr style="text-align: left;">
+                            <th>No</th>
+                            <th style="width: 257px;">Judul Lagu</th>
+                            <th>Artis</th>
+                            <th style="width: 100px;">Genre</th>
+                            <th colspan="3" style="text-align: center"></th>
+                        </tr>
+                        <tbody id="kontenmusik"></tbody>
+                        <!-- Cetak Here -->
+
+                    </table>
+
+                </div>
                 <!-- </table> -->
             </form>
+            <footer>
+                <p style="font-family: sans-serif">&copy zurichFox - 8 | 2022</p>
+            </footer>
         </div>
+        
     </div>
-    
+
     <!-- Write here -->
     <script src="js.js"></script>
 </body>
+
+
+</html>
