@@ -2,9 +2,58 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Make Your Own Playlist</title>
 </head>
 <body>
+    <div class="container">
+        <div class="form-input">
+            <form autocomplete="off">
+                <table>
+                    <tr>
+                        <!-- <td>
+                            <label for="judul_lagu">Judul Lagu</label>
+                        </td> -->
+                        <td>
+                            <input type="text" name="judul_lagu" id="judul_lagu" placeholder="Judul Lagu" autofocus>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- <td>
+                            <label for="genre">Genre</label>
+                        </td> -->
+                        <td>
+                            <select name="genre" id="genre">
+                                <option value="">genre 1</option>
+                                <option value="">genre 2</option>
+                                <option value="">genre 3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- <td>
+                            <label for="artis">Artis</label>
+                        </td> -->
+                        <td>
+                            <input type="text" name="artis" id="artis" placeholder="Artis">
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- <td>
+                            <label for="link">Link Lagu</label>
+                        </td> -->
+                        <td>
+                            <input type="text" name="link" id="link" placeholder="Link">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <button>Input</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
     <!-- Write here -->
     <script src="js.js"></script>
 </body>
