@@ -93,6 +93,8 @@ let addButtonId = document.getElementById("addButton")
 addButtonId.addEventListener("click", addButtonFunction)
 
 //DOM TABLE
+let table = document.querySelector(".cetakTable")
+
 function cetak() {
     for (let x = 0; x < data.length; x++) {
         //create TR
