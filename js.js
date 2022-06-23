@@ -100,6 +100,7 @@ function cetak() {
     for (let x = 0; x < data.length; x++) {
         //create TR
         let tr = document.createElement("tr")
+        tr.setAttribute("class", x)
         table.appendChild(tr)
         
         //Create New TD
@@ -113,8 +114,24 @@ function cetak() {
         newTD3.innerText = data[x].genre
         tr.appendChild(newTD3)
         let newTD4 = document.createElement("td")
-        newTD4.innerText = data[x].link
         tr.appendChild(newTD4)
+        let buttonEdit = document.createElement("button")
+        buttonEdit.innerText = "Edit"
+        newTD4.appendChild(buttonEdit)
+        let newTD5 = document.createElement("td")
+        tr.appendChild(newTD5)
+        let buttonDelete = document.createElement("button")
+        buttonDelete.innerText = "Delete"
+        newTD5.appendChild(buttonDelete)
+        let newTD6 = document.createElement("td")
+        tr.appendChild(newTD6)
+        let buttonPlay = document.createElement("button")
+        newTD6.appendChild(buttonPlay)
+        let linkA = document.createElement("a")
+        linkA.setAttribute("href", data[x].link)
+        linkA.setAttribute("target", "_blank")
+        linkA.innerText = "Play"
+        buttonPlay.appendChild(linkA)
     }
 }
 cetak()
