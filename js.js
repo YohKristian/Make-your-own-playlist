@@ -68,6 +68,10 @@ function addButtonFunction () {
     //console.log(typeof link.value)
     //console.log(link.value.length)
 
+    for (let i = 0; i < data.length; i++) {
+        document.getElementById("myTable").deleteRow(1);
+    }
+
     data.push({judul : judulLagu.value,
     artis : artis.value,
     genre : genre.value,
