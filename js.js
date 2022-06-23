@@ -58,36 +58,36 @@ function action(song, act, i) {
 
 
 
-// //DOM
-// function addButtonFunction () {
-//     let judulLagu = document.getElementById("judul_lagu")
-//     let genre = document.getElementById("genre")
-//     let artis = document.getElementById("artis")
-//     let link = document.getElementById("link")
+//DOM
+function addButtonFunction () {
+    let judulLagu = document.getElementById("judul_lagu")
+    let genre = document.getElementById("genre")
+    let artis = document.getElementById("artis")
+    let link = document.getElementById("link")
 
-//     //console.log(typeof link.value)
-//     console.log(link.value.length)
+    //console.log(typeof link.value)
+    console.log(link.value.length)
 
-//     if (link.value.length === 0) {
-//         data.push({judul : judulLagu.value,
-//             artis : artis.value,
-//             genre : genre.value,
-//             link : "-"})
-//     }
+    if (link.value.length === 0) {
+        data.push({judul : judulLagu.value,
+            artis : artis.value,
+            genre : genre.value,
+            link : "-"})
+    }
 
-//     data.push({judul : judulLagu.value,
-//     artis : artis.value,
-//     genre : genre.value,
-//     link : link.value})
+    data.push({judul : judulLagu.value,
+    artis : artis.value,
+    genre : genre.value,
+    link : link.value})
 
-//     console.log(data)
+    console.log(data)
 
-//     // console.log(judulLagu.value)
-//     // console.log(genre.value)
-//     // console.log(artis.value)
-//     // console.log(link.value)
-// }
+    // console.log(judulLagu.value)
+    // console.log(genre.value)
+    // console.log(artis.value)
+    // console.log(link.value)
+}
 
-// let addButtonId = document.getElementById("addButton")
+let addButtonId = document.getElementById("addButton")
 
-// addButtonId.addEventListener("click", addButtonFunction)
+addButtonId.addEventListener("click", addButtonFunction)
