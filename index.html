@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
     <title>Make Your Own Playlist</title>
     <link rel="icon" href="img/favicon.ico" type="image/x=icon">
 </head>
+
 <body>
     <div class="container">
-        <img href="img/logo.jpg">
         <div class="input-form">
             <form autocomplete="off">
                 <table>
+                    <img src="img/logo.png" alt="logo">
                     <tr>
                         <!-- <td>
                             <label for="judul_lagu">Judul Lagu</label>
                         </td> -->
                         <td>
-                            <input type="text" name="judul_lagu" id="judul_lagu" placeholder="Judul Lagu" autofocus class="form">
+                            <input type="text" name="judul_lagu" id="judul_lagu" placeholder="Judul Lagu" autofocus
+                                class="form" style="margin-top: 20px;">
                         </td>
                     </tr>
                     <tr>
@@ -53,10 +56,34 @@
                         </td>
                     </tr>
                 </table>
+                <input type="text" id="cari" class="form" placeholder="Masukan judul lagu / artis" style="margin-top: 30px">
+                <table border="2" cellpadding="10" class="container table" style="margin-top: 0">
+                    <tr style="color: white; font-family: Mulish, sans-serif;">
+                        <th>No</th>
+                        <th>Judul Lagu</th>
+                        <th>Genre</th>
+                        <th colspan="3">Action</th>
+                    </tr>
+                    <tr style="color: white; font-family: Mulish, sans-serif;">
+                        <td>1</td>
+                        <td>Lagu 1</td>
+                        <td>Genre 1</td>
+                        <td>
+                            <button>Edit</button>
+                        </td>
+                        <td>
+                            <button>Delete</button>
+                        </td>
+                        <td>
+                            <button>Play</button>
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
     </div>
     <!-- Write here -->
     <script src="js.js"></script>
 </body>
+
 </html>
