@@ -1,3 +1,4 @@
+// PROCESSING JS
 let data = [
     {
         judul : 'Save Your Tears',
@@ -35,38 +36,58 @@ let data = [
         genre : 'Rock',
         link : `https://www.youtube.com/watch?v=s1tAYmMjLdY`
     }
-  ]
+]
 
-//DOM
-function addButtonFunction () {
-    let judulLagu = document.getElementById("judul_lagu")
-    let genre = document.getElementById("genre")
-    let artis = document.getElementById("artis")
-    let link = document.getElementById("link")
 
-    //console.log(typeof link.value)
-    console.log(link.value.length)
+function sortingBy(song, sort) {
+    song.sort((a,b) => {
+        let byA = a[sort].toUpperCase()
+        let byB = b[sort].toUpperCase()
+        if (byA > byB) return 1
+        if (byB > byA) return -1
+    })
+    return song
+}
+// console.log(sortingBy(data, 'judul'));
 
-    if (link.value.length === 0) {
-        data.push({judul : judulLagu.value,
-            artis : artis.value,
-            genre : genre.value,
-            link : "-"})
-    }
-
-    data.push({judul : judulLagu.value,
-    artis : artis.value,
-    genre : genre.value,
-    link : link.value})
-
-    console.log(data)
-
-    // console.log(judulLagu.value)
-    // console.log(genre.value)
-    // console.log(artis.value)
-    // console.log(link.value)
+function action(song, act, i) {
+    // if (act === 'edit') {
+    // }
+    if (act === 'delete') delete song[i] 
 }
 
-let addButtonId = document.getElementById("addButton")
 
-addButtonId.addEventListener("click", addButtonFunction)
+
+// //DOM
+// function addButtonFunction () {
+//     let judulLagu = document.getElementById("judul_lagu")
+//     let genre = document.getElementById("genre")
+//     let artis = document.getElementById("artis")
+//     let link = document.getElementById("link")
+
+//     //console.log(typeof link.value)
+//     console.log(link.value.length)
+
+//     if (link.value.length === 0) {
+//         data.push({judul : judulLagu.value,
+//             artis : artis.value,
+//             genre : genre.value,
+//             link : "-"})
+//     }
+
+//     data.push({judul : judulLagu.value,
+//     artis : artis.value,
+//     genre : genre.value,
+//     link : link.value})
+
+//     console.log(data)
+
+//     // console.log(judulLagu.value)
+//     // console.log(genre.value)
+//     // console.log(artis.value)
+//     // console.log(link.value)
+// }
+
+// let addButtonId = document.getElementById("addButton")
+
+// addButtonId.addEventListener("click", addButtonFunction)
