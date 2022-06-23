@@ -94,41 +94,83 @@ addButtonId.addEventListener("click", addButtonFunction)
 let table = document.querySelector(".cetakTable")
 
 function cetak() {
+    document.getElementById("kontenmusik").innerHTML = ""
     for (let x = 0; x < data.length; x++) {
         //create TR
-        let tr = document.createElement("tr")
-        tr.setAttribute("class", x)
-        table.appendChild(tr)
+        document.getElementById("kontenmusik").innerHTML += `<tr><td>${x + 1}</td><td>${data[x].judul}</td><td>${data[x].artis}</td><td>${data[x].genre}</td>
+        <td><button type="button" onclick="editBaris(${x})">Edit</button></td><td><button onclick="deleteBaris(${x})">Delete</button></td><td><button><a href="${data[x].link}" target="_blank">Play</a></button></td></tr>`
+        // let tr = document.createElement("tr")
+        // tr.setAttribute("class", x)
+        // table.appendChild(tr)
         
-        //Create New TD
-        let newTD1 = document.createElement("td")
-        newTD1.innerText = data[x].judul
-        tr.appendChild(newTD1)
-        let newTD2 = document.createElement("td")
-        newTD2.innerText = data[x].artis
-        tr.appendChild(newTD2)
-        let newTD3 = document.createElement("td")
-        newTD3.innerText = data[x].genre
-        tr.appendChild(newTD3)
-        let newTD4 = document.createElement("td")
-        tr.appendChild(newTD4)
-        let buttonEdit = document.createElement("button")
-        buttonEdit.innerText = "Edit"
-        newTD4.appendChild(buttonEdit)
-        let newTD5 = document.createElement("td")
-        tr.appendChild(newTD5)
-        let buttonDelete = document.createElement("button")
-        buttonDelete.innerText = "Delete"
-        newTD5.appendChild(buttonDelete)
-        let newTD6 = document.createElement("td")
-        tr.appendChild(newTD6)
-        let buttonPlay = document.createElement("button")
-        newTD6.appendChild(buttonPlay)
-        let linkA = document.createElement("a")
-        linkA.setAttribute("href", data[x].link)
-        linkA.setAttribute("target", "_blank")
-        linkA.innerText = "Play"
-        buttonPlay.appendChild(linkA)
+        // //Create New TD
+        // let newTD1 = document.createElement("td")
+        // newTD1.innerText = data[x].judul
+        // tr.appendChild(newTD1)
+        // let newTD2 = document.createElement("td")
+        // newTD2.innerText = data[x].artis
+        // tr.appendChild(newTD2)
+        // let newTD3 = document.createElement("td")
+        // newTD3.innerText = data[x].genre
+        // tr.appendChild(newTD3)
+        // let newTD4 = document.createElement("td")
+        // tr.appendChild(newTD4)
+        // let buttonEdit = document.createElement("button")
+        // buttonEdit.innerText = "Edit"
+        // newTD4.appendChild(buttonEdit)
+        // let newTD5 = document.createElement("td")
+        // tr.appendChild(newTD5)
+        // let buttonDelete = document.createElement("button")
+        // buttonDelete.innerText = "Delete"
+        // newTD5.appendChild(buttonDelete)
+        // let newTD6 = document.createElement("td")
+        // tr.appendChild(newTD6)
+        // let buttonPlay = document.createElement("button")
+        // newTD6.appendChild(buttonPlay)
+        // let linkA = document.createElement("a")
+        // linkA.setAttribute("href", data[x].link)
+        // linkA.setAttribute("target", "_blank")
+        // linkA.innerText = "Play"
+        // buttonPlay.appendChild(linkA)
     }
 }
 cetak()
+
+function deleteBaris(index) {
+    data.splice(index, 1)
+    cetak()
+}
+
+function editBaris(index) {
+    document.getElementById("judul_lagu").value = data[index].judul
+    document.getElementById("genre").value = data[index].genre
+    document.getElementById("artis").value = data[index].artis
+    document.getElementById("link").value = data[index].link
+    document.getElementById("indexlagu").value = index
+}
+
+let updateeButton = document.getElementById("updateButton")
+
+updateeButton.addEventListener("click", updateButtonFunction)
+
+function updateButtonFunction () {
+    let judulLagu = document.getElementById("judul_lagu")
+    let genre = document.getElementById("genre")
+    let artis = document.getElementById("artis")
+    let link = document.getElementById("link")
+    let index = document.getElementById("indexlagu")
+
+    data[index.value] = ({judul : judulLagu.value,
+    artis : artis.value,
+    genre : genre.value,
+    link : link.value})
+    
+    document.getElementById("judul_lagu").value = ""
+    document.getElementById("genre").value = "R&B"
+    document.getElementById("artis").value = ""
+    document.getElementById("link").value = ""
+    document.getElementById("indexlagu").value = ""
+
+    //console.log(data)
+    cetak()
+}
