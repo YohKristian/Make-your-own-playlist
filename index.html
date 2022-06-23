@@ -56,8 +56,8 @@
                         </td>
                     </tr>
                 </table>
-                <input type="text" id="cari" class="form" placeholder="Masukan judul lagu / artis" style="margin-top: 30px">
-                <table border="2" cellpadding="10" class="container table" style="margin-top: 0">
+                <!-- <input type="text" id="cari" class="form" placeholder="Masukan judul lagu / artis" style="margin-top: 30px">
+                <table border="2" cellpadding="10" class="container table" style="margin-top: 0; inline">
                     <tr style="color: white; font-family: Mulish, sans-serif;">
                         <th>No</th>
                         <th>Judul Lagu</th>
@@ -77,28 +77,22 @@
                         <td>
                             <button>Play</button>
                         </td>
-                    </tr>
-                </table>
+                    </tr> -->
+                    <div class="table">
+                        <input type="text" id="cari" placeholder="Masukan judul lagu / artis">
+                
+                        <table border="1" cellpadding="10" class="cetakTable" id="myTable">
+                            <tr>
+                                <th>No</th>
+                                <th>Judul Lagu</th>
+                                <th>Genre</th>
+                                <th colspan="3">Action</th>
+                            </tr>
+                            <!-- Cetak Here -->
+                        </table>
+                    </div>
+                <!-- </table> -->
             </form>
-        </div>
-        <div class="table">
-            <select name="" id="">
-                <option value="">genre 1</option>
-                <option value="">genre 2</option>
-                <option value="">genre 3</option>
-            </select>
-        
-            <input type="text" id="cari" placeholder="Masukan judul lagu / artis">
-    
-            <table border="1" cellpadding="10" class="cetakTable" id="myTable">
-                <tr>
-                    <th>No</th>
-                    <th>Judul Lagu</th>
-                    <th>Genre</th>
-                    <th colspan="3">Action</th>
-                </tr>
-                <!-- Cetak Here -->
-            </table>
         </div>
     </div>
     
