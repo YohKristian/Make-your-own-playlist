@@ -66,21 +66,14 @@ function addButtonFunction () {
     let link = document.getElementById("link")
 
     //console.log(typeof link.value)
-    console.log(link.value.length)
-
-    if (link.value.length === 0) {
-        data.push({judul : judulLagu.value,
-            artis : artis.value,
-            genre : genre.value,
-            link : "-"})
-    }
+    //console.log(link.value.length)
 
     data.push({judul : judulLagu.value,
     artis : artis.value,
     genre : genre.value,
     link : link.value})
 
-    console.log(data)
+    //console.log(data)
     cetak()
 
     // console.log(judulLagu.value)
