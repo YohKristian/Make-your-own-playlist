@@ -91,3 +91,27 @@ function addButtonFunction () {
 let addButtonId = document.getElementById("addButton")
 
 addButtonId.addEventListener("click", addButtonFunction)
+
+//DOM TABLE
+function cetak() {
+    for (let x = 0; x < data.length; x++) {
+        //create TR
+        let tr = document.createElement("tr")
+        table.appendChild(tr)
+        
+        //Create New TD
+        let newTD1 = document.createElement("td")
+        newTD1.innerText = data[x].judul
+        tr.appendChild(newTD1)
+        let newTD2 = document.createElement("td")
+        newTD2.innerText = data[x].artis
+        tr.appendChild(newTD2)
+        let newTD3 = document.createElement("td")
+        newTD3.innerText = data[x].genre
+        tr.appendChild(newTD3)
+        let newTD4 = document.createElement("td")
+        newTD4.innerText = data[x].link
+        tr.appendChild(newTD4)
+    }
+}
+cetak()
