@@ -51,8 +51,6 @@ function sortingBy() {
 }
 
 function action(song, act, i) {
-    // if (act === 'edit') {
-    // }
     if (act === 'delete') delete song[i] 
 }
 
