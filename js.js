@@ -61,17 +61,37 @@ function addButtonFunction () {
     let artis = document.getElementById("artis")
     let link = document.getElementById("link")
 
-    //console.log(typeof link.value)
-    //console.log(link.value.length)
-
-    for (let i = 0; i < data.length; i++) {
-        document.getElementById("myTable").deleteRow(1);
+    if (judulLagu.value.length <= 0) {
+        alert("Judul lagu tidak boleh kosong");
+        judulLagu.focus();
+        return false;
+    }
+    if (artis.value.length <= 0) {
+        alert("Artis tidak boleh kosong");
+        artis.focus();
+        return false;
+    }
+    if (link.value.length <= 0) {
+        alert("Link lagu tidak boleh kosong");
+        link.focus();
+        return false;
+    }
+    if (genre.value == "Select Genre") {
+        alert("Genre lagu tidak boleh kosong");
+        genre.focus();
+        return false;
     }
 
-    data.push({judul : judulLagu.value,
-    artis : artis.value,
-    genre : genre.value,
-    link : link.value})
+    data.push({
+        judul: judulLagu.value,
+        artis: artis.value,
+        genre: genre.value,
+        link: link.value
+    })
+    reset()
+    
+    //console.log(typeof link.value)
+    //console.log(link.value.length)
 
     //console.log(data)
     cetak()
@@ -129,16 +149,14 @@ function updateButtonFunction () {
     let link = document.getElementById("link")
     let index = document.getElementById("indexlagu")
 
+    
+    
     data[index.value] = ({judul : judulLagu.value,
     artis : artis.value,
     genre : genre.value,
     link : link.value})
     
-    document.getElementById("judul_lagu").value = ""
-    document.getElementById("genre").value = "R&B"
-    document.getElementById("artis").value = ""
-    document.getElementById("link").value = ""
-    document.getElementById("indexlagu").value = ""
+    reset()
 
     //console.log(data)
     cetak()
@@ -169,4 +187,12 @@ function search() {
     } else {
         cetak();
     }
+}
+
+function reset() {
+    document.getElementById("judul_lagu").value = ""
+    document.getElementById("genre").value = "Select Genre"
+    document.getElementById("artis").value = ""
+    document.getElementById("link").value = ""
+    document.getElementById("indexlagu").value = ""
 }
