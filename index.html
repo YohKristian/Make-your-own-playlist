@@ -18,7 +18,7 @@
                     </div>
                     <script>
                         let person = prompt("Please enter your name", "");
-                        if (person.length === 0) {
+                        if (person === null || person.length === 0) {
                             document.getElementById("demo").innerHTML = `Hello,  Stranger`;
                         } else if (person != null) {
                             document.getElementById("demo").innerHTML = `Hello,  ${person}`;
