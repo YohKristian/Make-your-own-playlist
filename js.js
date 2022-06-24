@@ -149,7 +149,26 @@ function updateButtonFunction () {
     let link = document.getElementById("link")
     let index = document.getElementById("indexlagu")
 
-    
+    if (judulLagu.value.length <= 0) {
+        alert("Judul lagu tidak boleh kosong");
+        judulLagu.focus();
+        return false;
+    }
+    if (artis.value.length <= 0) {
+        alert("Artis tidak boleh kosong");
+        artis.focus();
+        return false;
+    }
+    if (link.value.length <= 0) {
+        alert("Link lagu tidak boleh kosong");
+        link.focus();
+        return false;
+    }
+    if (genre.value == "Select Genre") {
+        alert("Genre lagu tidak boleh kosong");
+        genre.focus();
+        return false;
+    }
     
     data[index.value] = ({judul : judulLagu.value,
     artis : artis.value,
