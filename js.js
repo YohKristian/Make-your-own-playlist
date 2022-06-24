@@ -99,9 +99,9 @@ function cetak() {
         let judul = `<td>${data[x].judul}</td>`
         let artis = `<td>${data[x].artis}</td>`
         let genre = `<td>${data[x].genre}</td>`
-        let btnEdit = `<td><button type="button" onclick="editBaris(${x})">Edit</button></td>`
-        let btnDelete = `<td><button onclick="deleteBaris(${x})">Delete</button></td>`
-        let btnPlay = `<td><button><a href="${data[x].link}" target="_blank">Play</a></button></td>`
+        let btnEdit = `<td><button class="buttonKecil" type="button" onclick="editBaris(${x})">Edit</button></td>`
+        let btnDelete = `<td><button class="buttonKecil" onclick="deleteBaris(${x})">Delete</button></td>`
+        let btnPlay = `<td><button class="buttonKecil"><a href="${data[x].link}" target="_blank">Play</a></button></td>`
         document.getElementById("kontenmusik").innerHTML += `<tr>${no}${judul}${artis}${genre}${btnEdit}${btnDelete}${btnPlay}</tr>`
     }
 }
@@ -144,4 +144,31 @@ function updateButtonFunction () {
 
     //console.log(data)
     cetak()
+}
+
+function search() {
+    let input = document.getElementById("cari").value;
+    let temp = [];
+    let obj = data.find(function (post) {
+        if (post.artis.toLowerCase() == input.toLowerCase() || post.judul.toLowerCase() == input.toLowerCase())
+            return true;
+    });
+
+    temp.push(obj)
+    if (obj !== undefined) {
+        document.getElementById("kontenmusik").innerHTML = ""
+        for (let x = 0; x < temp.length; x++) {
+            //create TR
+            let no = `<td>${x + 1}</td>`
+            let judul = `<td>${temp[x].judul}</td>`
+            let artis = `<td>${temp[x].artis}</td>`
+            let genre = `<td>${temp[x].genre}</td>`
+            let btnEdit = `<td><button class="buttonKecil" type="button" onclick="editBaris(${x})">Edit</button></td>`
+            let btnDelete = `<td><button class="buttonKecil" onclick="deleteBaris(${x})">Delete</button></td>`
+            let btnPlay = `<td><button class="buttonKecil"><a href="${temp[x].link}" target="_blank" style="text-decoration:none">Play</a></button></td>`
+            document.getElementById("kontenmusik").innerHTML += `<tr>${no}${judul}${artis}${genre}${btnEdit}${btnDelete}${btnPlay}</tr>`
+        }
+    } else {
+        cetak();
+    }
 }
