@@ -28,7 +28,7 @@ let data = [
         judul : `Don't Look Back in Anger`,
         artis : 'Oasis',
         genre : 'Rock',
-        link : `https://www.youtube.com/watch?v=fKVgm3_x-OI`
+        link : `https://youtu.be/r8OipmKFDeM`
     },
     {
         judul : `I Miss You`,
