@@ -1,47 +1,46 @@
 // PROCESSING JS
-let data = [
-    {
-        judul : 'Save Your Tears',
-        artis : 'The Weeknd',
-        genre : 'R&B',
-        link : 'https://www.youtube.com/watch?v=XXYlFuWEuKI'
+let data = [{
+        judul: 'Save Your Tears',
+        artis: 'The Weeknd',
+        genre: 'R&B',
+        link: 'https://www.youtube.com/watch?v=XXYlFuWEuKI'
     },
     {
-        judul : `Don't Matter`,
-        artis : 'Akon',
-        genre : 'R&B',
-        link : `https://www.youtube.com/watch?v=JWA5hJl4Dv0`
+        judul: `Don't Matter`,
+        artis: 'Akon',
+        genre: 'R&B',
+        link: `https://www.youtube.com/watch?v=JWA5hJl4Dv0`
     },
     {
-        judul : `Satru`,
-        artis : 'Denny Caknan',
-        genre : 'Koplo',
-        link : `https://www.youtube.com/watch?v=fKVgm3_x-OI`
+        judul: `Satru`,
+        artis: 'Denny Caknan',
+        genre: 'Koplo',
+        link: `https://www.youtube.com/watch?v=fKVgm3_x-OI`
     },
     {
-        judul : `Lemah Teles`,
-        artis : 'Happy Asmara',
-        genre : 'Koplo',
-        link : `https://www.youtube.com/watch?v=3tmwbTeQWmk`
+        judul: `Lemah Teles`,
+        artis: 'Happy Asmara',
+        genre: 'Koplo',
+        link: `https://www.youtube.com/watch?v=3tmwbTeQWmk`
     },
     {
-        judul : `Don't Look Back in Anger`,
-        artis : 'Oasis',
-        genre : 'Rock',
-        link : `https://youtu.be/r8OipmKFDeM`
+        judul: `Don't Look Back in Anger`,
+        artis: 'Oasis',
+        genre: 'Rock',
+        link: `https://youtu.be/r8OipmKFDeM`
     },
     {
-        judul : `I Miss You`,
-        artis : 'Blink-182',
-        genre : 'Rock',
-        link : `https://www.youtube.com/watch?v=s1tAYmMjLdY`
+        judul: `I Miss You`,
+        artis: 'Blink-182',
+        genre: 'Rock',
+        link: `https://www.youtube.com/watch?v=s1tAYmMjLdY`
     }
 ]
 
 
 function sortingBy() {
     let sort = document.getElementById('sort').value
-    data.sort((a,b) => {
+    data.sort((a, b) => {
         let byA = a[sort].toUpperCase()
         let byB = b[sort].toUpperCase()
         if (byA > byB) return 1
@@ -51,11 +50,11 @@ function sortingBy() {
 }
 
 function action(song, act, i) {
-    if (act === 'delete') delete song[i] 
+    if (act === 'delete') delete song[i]
 }
 
 //DOM
-function addButtonFunction () {
+function addButtonFunction() {
     let judulLagu = document.getElementById("judul_lagu")
     let genre = document.getElementById("genre")
     let artis = document.getElementById("artis")
@@ -89,7 +88,7 @@ function addButtonFunction () {
         link: link.value
     })
     reset()
-    
+
     //console.log(typeof link.value)
     //console.log(link.value.length)
 
@@ -136,7 +135,7 @@ function editBaris(index) {
     document.getElementById("artis").value = data[index].artis
     document.getElementById("link").value = data[index].link
     document.getElementById("indexlagu").value = index
-    
+
     document.getElementById("addButton").style.display = "none";
     document.getElementById("updateButton").style.display = null;
 }
@@ -145,7 +144,7 @@ let updateeButton = document.getElementById("updateButton")
 
 updateeButton.addEventListener("click", updateButtonFunction)
 
-function updateButtonFunction () {
+function updateButtonFunction() {
     let judulLagu = document.getElementById("judul_lagu")
     let genre = document.getElementById("genre")
     let artis = document.getElementById("artis")
@@ -172,15 +171,17 @@ function updateButtonFunction () {
         genre.focus();
         return false;
     }
-    
-    data[index.value] = ({judul : judulLagu.value,
-    artis : artis.value,
-    genre : genre.value,
-    link : link.value})
-    
+
+    data[index.value] = ({
+        judul: judulLagu.value,
+        artis: artis.value,
+        genre: genre.value,
+        link: link.value
+    })
+
     document.getElementById("addButton").style.display = null;
     document.getElementById("updateButton").style.display = "none";
-    
+
     reset()
 
     //console.log(data)
