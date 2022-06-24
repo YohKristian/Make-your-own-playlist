@@ -12,4 +12,4 @@ Overview :
 
 Fitur Tambahan :
 - search lagu / artis
-- sorting berdasarkan genre
+- sorting berdasarkan judul lagu / artis / genre
