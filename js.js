@@ -136,6 +136,9 @@ function editBaris(index) {
     document.getElementById("artis").value = data[index].artis
     document.getElementById("link").value = data[index].link
     document.getElementById("indexlagu").value = index
+    
+    document.getElementById("addButton").style.display = "none";
+    document.getElementById("updateButton").style.display = null;
 }
 
 let updateeButton = document.getElementById("updateButton")
@@ -174,6 +177,9 @@ function updateButtonFunction () {
     artis : artis.value,
     genre : genre.value,
     link : link.value})
+    
+    document.getElementById("addButton").style.display = null;
+    document.getElementById("updateButton").style.display = "none";
     
     reset()
 
