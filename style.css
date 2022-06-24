@@ -158,3 +158,32 @@ footer {
   margin-bottom: 30px;
   width: 620px;
 }
+
+
+a {
+  text-decoration: none;
+}
+
+.buttonKecil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "calibri",sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: #00ffd0;
+  box-shadow: 0 3px rgb(64, 61, 61);
+  text-decoration: none;
+}
+
+.buttonKecil:hover{
+  background-color:  #00ffd0;
+}
+
+.buttonKecil:active{
+  background-color: #00ffd0;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+}
