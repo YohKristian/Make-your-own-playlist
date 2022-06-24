@@ -1,6 +1,6 @@
 # Make-your-own-playlist
 
-Team #8 Hackaton8 Hacktiv8 - Theme Entertaiment
+Team #8 Hackaton8 Hacktiv8 - Theme Entertainment
 
 Tema Musik : Make your own playlist
 
